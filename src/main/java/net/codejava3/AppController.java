@@ -1,4 +1,4 @@
-package net.codejava;
+package net.codejava3;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class AppController {
+public class AppController {/*
 
 	@Autowired
 	private ProductService service; 
@@ -57,4 +57,4 @@ public class AppController {
 		service.delete(id);
 		return "redirect:/";		
 	}
-}
+*/}

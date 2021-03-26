@@ -1,4 +1,4 @@
-package net.codejava;
+package net.codejava3;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

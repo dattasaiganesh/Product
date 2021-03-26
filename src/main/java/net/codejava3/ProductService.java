@@ -1,4 +1,4 @@
-package net.codejava;
+package net.codejava3;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class ProductService {
+public class ProductService {/*
 
 	@Autowired
 	private ProductRepository repo;
@@ -31,4 +31,4 @@ public class ProductService {
 		repo.delete(id);
 		//repo.deleteById(id);
 	}
-}
+*/}
