@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="../css/background.css" th:href="@{/css/background.css}"/>
+</head>
+<body>
+<div align="center">
+
+<!--  <form th:action="@{'/city/' + ${city}}" modelAttribute="finance"   method="post"> 
+ modelAttribute="login"
+ 
+   <form th:action="city" method="post" modelAttribute="ciyt"> 
+  
+   <form action="/city"  method="POST" modelAttribute="finance">
+th:action="@{'/city/' + ${reservation}}"       th:object="${finance}"
+ -->      
+     <form action="#" th:action="@{/getPlace}" th:object="${finances}"  method="post">
+    <!--   <form:form method="POST" modelAttribute="city" action="getplace"> -->
+                    <label for="city">Choose city</label>
+                    <select th:field="*{city}">
+                        <option value="">Nothing selected</option>
+                        <option th:each="product: ${listProducts}"
+                                th:value="${product.city}"
+                                th:text="${product.city}">city
+                        </option>
+
+                    </select>
+                    <br></br><br></br>  
+        
+                
+                 <button type="submit">Submit form</button>
+            
+            </form> 
+</div>    
+
+</body>
+</html>

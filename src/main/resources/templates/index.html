@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>Cutomers List</h1>
+    <a href="new">Add new Customer</a>
+    <a href="/">Home</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Total Amount</th>
+                <th>Given Amount</th>
+                <th>Taken Amount</th>
+                <th>City</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${listProducts}">
+            	<td th:text="${product.serielNumber}">S.No</td>
+                <td th:text="${product.name}">Name</td>
+                <td th:text="${product.totalAmount}">Total Amount</td>
+                <td th:text="${product.givenAmount}">Given Amount</td>
+                <td th:text="${product.takemAmount}">Taken Amount</td>
+                <td th:text="${product.city}">City</td>
+               <!--  <td th:text="${product.date}">Date</td>  -->
+               <td th:text="${product.date}">Date</td> 
+               <!--  <td th:text="${#dates.format(comment.createdAt, 'dd-MM-yyyy')}"> Date</td> -->
+                <td>
+                	<a th:href="@{'/edit/' + ${product.serielNumber}}">Edit</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/delete/' + ${product.serielNumber}}">Delete</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/city/' + ${product.city}}">CityWise</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/customer/' + ${product.serielNumber}}">Customer Info</a>
+                	
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>
